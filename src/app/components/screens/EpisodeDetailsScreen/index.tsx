@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import styles from "../../EpisodieCard/styles.module.css";
-
+import Personaje from "../../CardEpisode"
 interface Character {
   id: number;
   name: string;
@@ -45,12 +45,7 @@ function EpisodeDetailsScreen() {
           <h2>PERSONAJES QUE APARECEN EN EL EPISODIO:</h2>
           <div className={styles.characterList}>
             {episode.characters.map((character) => (
-              <Link key={character.id} to={`/characters/${character.id}`}>
-                <div className={styles.characterCard}>
-                  <img src={character.image} alt={character.name} />
-                  <p>{character.name}</p>
-                </div>
-              </Link>
+            <Personaje enlace={character} />
             ))}
           </div>
           <Link to="/episodes" className={styles.goBacka}>
