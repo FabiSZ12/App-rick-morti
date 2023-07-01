@@ -6,7 +6,7 @@ function Navbar() {
   return (
     <header className={styles.header}>
       <div className={styles.logo}>
-        <img src={favicon} alt="" /> APP RICK AND MORTY
+        <img src={favicon} width={70} height={70} alt="" /> APP RICK AND MORTY
       </div>
       <ul className={styles.navigation}>
         <li>
